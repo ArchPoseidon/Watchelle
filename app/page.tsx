@@ -39,10 +39,9 @@ export default function Home() {
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-1 flex-col items-center justify-center gap-8 px-6 py-12">
       <div className="text-center">
-        <h1 className="font-display text-5xl italic text-cream-100">Watchélle</h1>
+        <h1 className="font-display text-7xl italic text-cream-100">Watchélle</h1>
         <p className="mt-3 text-cream-muted">
-          The two-person movie &amp; show matchmaker. Stop scrolling, stop negotiating — swipe together and
-          land on the one thing you both actually want to watch tonight.
+          The two-person movie &amp; show matchmaker. Swipe together, stop scrolling, and land on tonight&apos;s watch.
         </p>
       </div>
 
@@ -55,7 +54,7 @@ export default function Home() {
       <button
         onClick={startSession}
         disabled={starting}
-        className="w-full rounded-full bg-gold-500 py-4 font-display text-lg font-semibold text-plum-950 disabled:opacity-40"
+        className="w-full rounded-full bg-pink-500 py-4 font-display text-lg font-semibold text-plum-950 disabled:opacity-40"
       >
         {starting ? "Starting…" : "Start tonight’s watch"}
       </button>

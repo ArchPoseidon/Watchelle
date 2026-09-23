@@ -192,7 +192,7 @@ export function PreferenceForm({
       <button
         type="submit"
         disabled={!canSubmit || submitting}
-        className="w-full rounded-full bg-gold-500 py-4 font-display text-lg font-semibold text-plum-950 transition-opacity disabled:opacity-40"
+        className="w-full rounded-full bg-pink-500 py-4 font-display text-lg font-semibold text-plum-950 transition-opacity disabled:opacity-40"
       >
         {submitting ? "Saving…" : "I'm ready"}
       </button>

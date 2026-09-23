@@ -35,6 +35,7 @@ export interface RightSwipeRecord {
  */
 export interface Db {
   createCouple(): Promise<string>;
+  coupleExists(id: string): Promise<boolean>;
   createSession(input: CreateSessionInput): Promise<string>;
   getSession(id: string): Promise<SessionRow | null>;
   /** If `expectedStatus` is given, the update only applies when the row's current status matches (optimistic guard against race conditions). Returns null if the guard fails or the row doesn't exist. */

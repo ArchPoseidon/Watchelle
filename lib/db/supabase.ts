@@ -11,6 +11,11 @@ export class SupabaseDb implements Db {
     return data.id;
   }
 
+  async coupleExists(id: string): Promise<boolean> {
+    const { data } = await supabaseServer.from("couples").select("id").eq("id", id).maybeSingle();
+    return Boolean(data);
+  }
+
   async createSession({ coupleId }: CreateSessionInput): Promise<string> {
     const { data, error } = await supabaseServer
       .from("sessions")

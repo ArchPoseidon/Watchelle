@@ -60,14 +60,14 @@ export function SwipeCard({
             <Image src={title.posterUrl} alt={title.name} fill className="object-cover" sizes="400px" priority={isTop} />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <span className="font-display text-7xl text-sage-500/40">{title.name.charAt(0)}</span>
+              <span className="font-display text-7xl text-white/30">{title.name.charAt(0)}</span>
             </div>
           )}
 
           {isTop && (
             <>
               <div
-                className="absolute left-6 top-6 rotate-[-12deg] rounded-lg border-4 border-sage-500 px-3 py-1 font-display text-2xl font-bold text-sage-500"
+                className="absolute left-6 top-6 rotate-[-12deg] rounded-lg border-4 border-pink-500 px-3 py-1 font-display text-2xl font-bold text-pink-500"
                 style={{ opacity: likeOpacity }}
               >
                 LIKE
@@ -83,17 +83,17 @@ export function SwipeCard({
 
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-plum-950 via-plum-950/85 to-transparent p-5 pt-16">
             <div className="flex items-baseline justify-between gap-2">
-              <h3 className="font-display text-2xl font-semibold text-cream-100">{title.name}</h3>
-              {title.year && <span className="shrink-0 text-cream-muted">{title.year}</span>}
+              <h3 className="font-display text-2xl font-semibold text-white">{title.name}</h3>
+              {title.year && <span className="shrink-0 text-white/70">{title.year}</span>}
             </div>
-            <div className="mt-1 flex items-center gap-3 text-sm text-peach-400">
+            <div className="mt-1 flex items-center gap-3 text-sm text-gold-400">
               {title.rating != null && <span>★ {title.rating.toFixed(1)}</span>}
               {runtimeLabel(title) && <span>{runtimeLabel(title)}</span>}
-              <span className="uppercase tracking-wide text-cream-muted">
+              <span className="uppercase tracking-wide text-white/70">
                 {title.mediaKind === "movie" ? "Movie" : "Series"}
               </span>
             </div>
-            <p className="mt-2 line-clamp-2 text-sm text-cream-muted">{title.synopsis}</p>
+            <p className="mt-2 line-clamp-2 text-sm text-white/70">{title.synopsis}</p>
           </div>
         </div>
       </div>

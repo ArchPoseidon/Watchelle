@@ -67,7 +67,7 @@ export function QRShare({ joinUrl }: { joinUrl: string }) {
         {canShareFiles && (
           <button
             onClick={shareImage}
-            className="w-full rounded-full bg-gold-500 py-3 font-display font-semibold text-plum-950"
+            className="w-full rounded-full bg-pink-500 py-3 font-display font-semibold text-plum-950"
           >
             Share QR to a messaging app
           </button>

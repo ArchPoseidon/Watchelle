@@ -1,37 +1,47 @@
 @import "tailwindcss";
 
 /*
-  Watchélle — "plum & sage" palette.
-  Deliberately not the red/burgundy "cinema velvet" cliché: an earthy,
-  unexpected pairing (deep plum + sage + peach + gold) that still reads as
-  soft/plush. This is a fixed brand theme, not a system light/dark toggle —
-  like Spotify or Tinder, the app carries its own identity everywhere.
+  Watchélle — updated palette: Peony Pink, Cream, Deep Teal, Butter Gold.
+  Light theme now (cream page, deep-teal ink) — still a fixed brand theme,
+  not a system light/dark toggle. Token NAMES are kept from the previous
+  plum/sage/peach/cream/gold palette so components don't need touching;
+  only the hex values changed underneath.
 */
 :root {
-  --color-plum-950: #1d1420;
-  --color-plum-900: #241a29;
-  --color-plum-800: #322336;
-  --color-plum-700: #402c46;
-  --color-plum-600: #513a58;
+  /* card surfaces / borders / poster-scrim ramp (was "plum") */
+  --color-plum-950: #1f4b4a; /* Deep Teal — darkest ink (text on gold buttons, poster scrim base) */
+  --color-plum-900: #163837; /* darker teal — scrim far stop / placeholder gradient */
+  --color-plum-800: #ffffff; /* card surface */
+  --color-plum-700: #2a5957; /* mid teal — poster placeholder gradient */
+  --color-plum-600: #ded0ba; /* soft warm border */
 
-  --color-sage-400: #a9c4a0;
-  --color-sage-500: #8caf80;
-  --color-sage-600: #6f9564;
+  /* accent (was "sage") — now Deep Teal family */
+  --color-sage-400: #3d7674;
+  --color-sage-500: #1f4b4a; /* Deep Teal */
+  --color-sage-600: #123231;
 
-  --color-peach-400: #f3c9a1;
-  --color-peach-500: #eab183;
-  --color-peach-600: #dd9760;
+  /* muted metadata text (was "peach") — muted gold-brown for legibility on light surfaces */
+  --color-peach-400: #c98a3e;
+  --color-peach-500: #b97a2e;
+  --color-peach-600: #a66f2e;
 
-  --color-cream-100: #faf3e7;
-  --color-cream-200: #f2e6d2;
-  --color-cream-muted: #cbb9c9;
+  /* ink / body text (was "cream") — Deep Teal on light bg */
+  --color-cream-100: #1f4b4a;
+  --color-cream-200: #2a5957;
+  --color-cream-muted: #6b8582;
 
-  --color-gold-400: #e6c565;
-  --color-gold-500: #d9b64a;
+  /* Butter Gold */
+  --color-gold-400: #f7cd75;
+  --color-gold-500: #f2b84b;
 
-  --color-clay-500: #c17a63;
+  /* muted terracotta for "pass"/negative */
+  --color-clay-500: #b5654f;
 
-  --background: var(--color-plum-950);
+  /* Peony Pink — primary accent */
+  --color-pink-500: #e85d75;
+  --color-pink-600: #d1445d;
+
+  --background: #fff6ed; /* Cream */
   --foreground: var(--color-cream-100);
 }
 
@@ -62,12 +72,15 @@
 
   --color-clay-500: var(--color-clay-500);
 
+  --color-pink-500: var(--color-pink-500);
+  --color-pink-600: var(--color-pink-600);
+
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -80,9 +93,9 @@ body {
 body {
   background-image: radial-gradient(
       circle at 20% -10%,
-      rgba(140, 175, 128, 0.12),
+      rgba(232, 93, 117, 0.07),
       transparent 45%
     ),
-    radial-gradient(circle at 100% 10%, rgba(235, 177, 131, 0.08), transparent 40%);
+    radial-gradient(circle at 100% 10%, rgba(242, 184, 75, 0.08), transparent 40%);
   background-attachment: fixed;
 }

@@ -50,7 +50,7 @@ export function RatingForm({
       <button
         type="submit"
         disabled={rating === 0 || submitting}
-        className="w-full rounded-full bg-gold-500 py-4 font-display text-lg font-semibold text-plum-950 disabled:opacity-40"
+        className="w-full rounded-full bg-pink-500 py-4 font-display text-lg font-semibold text-plum-950 disabled:opacity-40"
       >
         {submitting ? "Saving…" : "Save rating"}
       </button>

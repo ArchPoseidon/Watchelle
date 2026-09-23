@@ -35,7 +35,7 @@ export function FinalPickList({
                   <Image src={title.posterUrl} alt={title.name} width={64} height={96} className="h-full w-full object-cover" />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center">
-                    <span className="font-display text-2xl text-sage-500/40">{title.name.charAt(0)}</span>
+                    <span className="font-display text-2xl text-white/40">{title.name.charAt(0)}</span>
                   </div>
                 )}
               </div>

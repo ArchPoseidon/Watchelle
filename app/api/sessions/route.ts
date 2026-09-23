@@ -6,7 +6,10 @@ export async function POST(request: Request) {
   const requestedCoupleId: string | undefined = body?.coupleId;
 
   try {
-    const coupleId = requestedCoupleId ?? (await db.createCouple());
+    const coupleId =
+      requestedCoupleId && (await db.coupleExists(requestedCoupleId))
+        ? requestedCoupleId
+        : await db.createCouple();
     const sessionId = await db.createSession({ coupleId });
     return NextResponse.json({ sessionId, coupleId });
   } catch (err) {

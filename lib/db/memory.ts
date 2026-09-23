@@ -29,6 +29,10 @@ class MemoryDb implements Db {
     return id;
   }
 
+  async coupleExists(id: string): Promise<boolean> {
+    return this.couples.has(id);
+  }
+
   async createSession({ coupleId }: CreateSessionInput): Promise<string> {
     const id = randomUUID();
     const now = new Date().toISOString();

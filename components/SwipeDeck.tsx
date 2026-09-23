@@ -61,7 +61,7 @@ export function SwipeDeck({
         <button
           onClick={() => advance("right")}
           aria-label="Like"
-          className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-sage-500 text-3xl text-sage-500 active:scale-95"
+          className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-pink-500 text-3xl text-pink-500 active:scale-95"
         >
           ♥
         </button>
